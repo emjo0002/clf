@@ -20,7 +20,7 @@
 				<h5>Gå ikke glip af de seneste nyheder og fordele hos Copenhagen Light Festival</h5>
 				<form>
 					<input placeholder="Indsæt din mail her...">
-					<buttom> <img src="" alt=""></buttom>
+					<buttom class="knap"> <img class="pil" src="/public/pil.svg" alt="Pil"></buttom>
 				</form>
 			</div>
 	
@@ -37,8 +37,8 @@
 			<div class="some">
 				<p>FØLG OS</p>
 
-				<img src="/public/insta.svg" alt="Instagram logo">
-				<img src="/public/fblogo.webp" alt="Facebook logo">
+				<img class="logos" src="/public/insta.svg" alt="Instagram logo">
+				<img class="logos" src="/public/facebook.svg" alt="Facebook logo">
 			</div>
 				
 		</div>
@@ -86,16 +86,26 @@
 			background-color: black;
 		}
 
-		img {
+		.logos {
 			width: 15%;
+			padding: 5px;
 		}
 
 		input {
-			background-color: black;
-			outline: 20px white;
+			/* background-color: black;*/
+			border: 2px white;
+			width: 40%;
+			padding: 8px;
 		} 
 
-	
+		.pil {
+			width: 12%;
+		}
+
+		.knap {
+			border: 2px white; /* hvorfor virker dette ikke?*/
+		}
+
 	</style>
 	</footer>
 </html>
