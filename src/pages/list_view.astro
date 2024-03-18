@@ -1,27 +1,23 @@
 ---
-
+import Card_v from "../components/Card_v.astro";
+import Card_h from "../components/Card_h.astro";
 ---
 
 <html lang="da">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>udstillinger</h1>
-        <h2><span>TIDLIGERE</span><span>AKTUELLE</span><span>PERMANENTE</span></h2>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>UDSTILLINGER</h1>
+    <h2><span>TIDLIGERE</span>, <span>AKTUELLE</span>, <span>PERMANENTE</span></h2>
 
-        <div class="grid_1-1">
-            <div></div>
-            <div></div>
-        </div>
+    <Card_v />
 
-<template>
-    
-</template>
-
-	</body>
+    <Card_h />
+  </body>
 </html>
