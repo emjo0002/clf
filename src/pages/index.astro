@@ -20,7 +20,7 @@
 				<h5>Gå ikke glip af de seneste nyheder og fordele hos Copenhagen Light Festival</h5>
 				<form>
 					<input placeholder="Indsæt din mail her...">
-					<buttom class="knap"> <img class="pil" src="/public/pil.svg" alt="Pil"></buttom>
+					<img class="pil" src="/public/pil.svg" alt="Pil"></img>
 				</form>
 			</div>
 	
@@ -75,6 +75,12 @@
 			margin-left: 4rem;
 			color: white;
 		}
+
+		input {
+			border: 2px white;
+			width: 50%;
+			padding: 8px;
+		}
 	
 		.info {
 			margin-left: 6rem;
@@ -87,7 +93,8 @@
 		}
 
 		h5 {
-			margin-right: 8rem;
+			margin: 2%;
+			margin-top: 12%;
 			font-size: x-large;
 		}
 
@@ -96,19 +103,11 @@
 			padding: 5px;
 		}
 
-		input {
-			/* background-color: black;*/
-			border: 2px white;
-			width: 40%;
-			padding: 8px;
-		} 
-
 		.pil {
-			width: 12%;
-		}
-
-		.knap {
-			border: 2px white; /* hvorfor virker dette ikke?*/
+			width: 7.25%;
+			padding: 8px;
+			border: 2px solid white;
+			translate: -8% 36%; 
 		}
 	}
 		/* MOBILVERSION */
@@ -121,9 +120,16 @@
 			gap: 40px;
 		}
 
+		input {
+			border: 2px white;
+			width: 40%;
+			padding: 8px;
+		}
+
 		h5 {
 			font-size: large;
 		}
+
 		.pil {
 			width: 10%;
 		}
