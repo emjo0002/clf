@@ -3,13 +3,13 @@
 ---
 
 <div class="grid_1-1">
-  <div>
+  <div class="text">
     <h3>'Du som er i himlene'</h3>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente debitis tempore beatae ipsa libero illo modi, autem, perspiciatis aliquam assumenda temporibus explicabo ea iure deserunt distinctio, reprehenderit officia dolor enim!</p>
 
     <p>LÆS MERE -----------></p>
   </div>
-  <div>
+  <div class="image">
     <img src="/du_som_er_i_Himlene.jpg" alt="" class="card_v_billede" />
   </div>
 </div>
@@ -25,10 +25,13 @@
   }
 
   .grid_1-1 {
-    display: flex;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 2rem;
     margin-top: 8%;
+  }
+  .grid_1-1:nth-child(odd) .text {
+    order: 10;
   }
 
   .card_v_billede {

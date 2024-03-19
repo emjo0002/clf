@@ -1,8 +1,13 @@
 ---
 import Card_v from "../components/Card_v.astro";
-import Card_h from "../components/Card_h.astro";
 
-const data = await fetch().then((res) => res.json);
+const data = await fetch("https://fcbvmlrpntifmglyhaps.supabase.co/rest/v1/test_products", {
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZjYnZtbHJwbnRpZm1nbHloYXBzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTAzNTk3MjgsImV4cCI6MjAyNTkzNTcyOH0.xrxVZKs3mAZMWAP5IsKkDABTXackwex73ZIHtyLHB44",
+  },
+}).then((res) => res.json());
+console.log(data);
 ---
 
 <html lang="da">
@@ -14,12 +19,17 @@ const data = await fetch().then((res) => res.json);
     <title>Astro</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <main>
     <h1>UDSTILLINGER</h1>
     <h2><span>TIDLIGERE</span>, <span>AKTUELLE</span>, <span>PERMANENTE</span></h2>
+    <section class="udstillinger">
+      {
+        data.map((udstilling) => {
+          return <Card_v />;
+        })
+      }
+    </section>
+  </main>
 
-    <Card_v />
 
-    <Card_h />
-  </body>
 </html>
