@@ -1,1 +1,134 @@
+<footer>
+    <div class="footer_grid">
+        <div class="nyhedsbrev">
+            <h5>Gå ikke glip af de seneste nyheder og fordele hos Copenhagen Light Festival</h5>
+            <form>
+                <input placeholder="Indsæt din mail her...">
+                <img class="pil" src="/public/pil.svg" alt="Pil"></img>
+            </form>
+        </div>
 
+        <div class="info">
+            <p class="bold">INFORMATION OG RESSOURCER</p>
+            <p>Personoplysninger</p>
+            <p>Presse og medier</p>
+            <p>FAQ</p>
+            <br>
+            <p class="bold">KONTAKT</p>
+            <p>info@copenhagenlightfestival.org</p>
+        </div>
+
+        <div class="some">
+            <p class="bold">FØLG OS</p>
+
+            <img class="logos" src="/public/insta.svg" alt="Instagram logo">
+            <img class="logos" src="/public/facebook.svg" alt="Facebook logo">
+        </div>
+            
+    </div>
+</footer>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap');
+footer {
+        background-color: black;
+    }
+
+/* Tekst styling */
+h5, p {
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        color: white;
+    } 
+
+.bold {
+    font-weight: bold;
+}
+
+/* DESKTOP */
+@media (min-width: 800px) {
+    .footer_grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: space-between;
+        margin-top: 5rem;
+    }
+
+    .nyhedsbrev {
+        margin-left: 4rem;
+        color: white;
+    }
+
+    input {
+        border: 2px white;
+        width: 50%;
+        padding: 8px;
+        margin-left: 2.25%;
+    }
+
+    .info {
+        margin-left: 6rem;
+        padding: 2rem;
+    }
+
+    .some {
+        padding: 2rem;
+        margin-left: 8rem;
+    }
+
+    h5 {
+        margin: 2%;
+        margin-top: 12%;
+        font-size: x-large;
+    }
+
+    .logos {
+        width: 15%;
+        padding: 5px;
+    }
+
+    .pil {
+        width: 7.25%;
+        padding: 8px;
+        border: 2px solid white;
+        translate: -8% 36%; 
+    }
+}
+    /* MOBILVERSION */
+    @media (max-width: 800px) {
+    .footer_grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        /*justify-content: space-between;*/
+        margin-left: 2rem;
+        gap: 40px;
+    }
+
+    input {
+        border: 2px white;
+        width: 40%;
+        padding: 8px;
+    }
+
+    h5 {
+        font-size: large;
+        margin: 1%;
+        margin-top: 3rem;
+        margin-left: -0.15rem;
+    }
+
+    .pil {
+        width: 10%;
+        padding: 1%;
+        border: 2px solid white;
+        translate: -7% 37%; 
+    }
+    .logos {
+        width: 8%;
+        padding: 5px;
+        margin-bottom: 50px;
+    }
+}
+</style>
+</footer>
