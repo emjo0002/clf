@@ -25,17 +25,17 @@
 			</div>
 	
 			<div class="info">
-				<p>INFORMATION OG RESSOURCER</p>
+				<p class="bold">INFORMATION OG RESSOURCER</p>
 				<p>Personoplysninger</p>
 				<p>Presse og medier</p>
 				<p>FAQ</p>
 				<br>
-				<p>KONTAKT</p>
+				<p class="bold">KONTAKT</p>
 				<p>info@copenhagenlightfestival.org</p>
 			</div>
 	
 			<div class="some">
-				<p>FØLG OS</p>
+				<p class="bold">FØLG OS</p>
 
 				<img class="logos" src="/public/insta.svg" alt="Instagram logo">
 				<img class="logos" src="/public/facebook.svg" alt="Facebook logo">
@@ -46,7 +46,24 @@
 	
 	<style>
 	@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap');
+	footer {
+			background-color: black;
+		}
+
+	/* Tekst styling */
+	h5, p {
+			font-family: "Roboto", sans-serif;
+			font-weight: 400;
+			font-style: normal;
+			color: white;
+		} 
 	
+	.bold {
+		font-weight: bold;
+	}
+
+	/* DESKTOP */
+	@media (min-width: 800px) {
 		.footer_grid {
 			display: grid;
 			grid-template-columns: 1fr 1fr 1fr;
@@ -68,22 +85,10 @@
 			padding: 2rem;
 			margin-left: 8rem;
 		}
-	
-		/* Tekst styling */
-		h5, p {
-			font-family: "Roboto", sans-serif;
-			font-weight: 400;
-			font-style: normal;
-			color: white;
-		} 
 
 		h5 {
 			margin-right: 8rem;
 			font-size: x-large;
-		}
-
-		footer {
-			background-color: black;
 		}
 
 		.logos {
@@ -105,7 +110,29 @@
 		.knap {
 			border: 2px white; /* hvorfor virker dette ikke?*/
 		}
+	}
+		/* MOBILVERSION */
+		@media (max-width: 800px) {
+		.footer_grid {
+			display: grid;
+			grid-template-columns: 1fr;
+			/*justify-content: space-between;*/
+			margin-left: 2rem;
+			gap: 40px;
+		}
 
+		h5 {
+			font-size: large;
+		}
+		.pil {
+			width: 10%;
+		}
+		.logos {
+			width: 8%;
+			padding: 5px;
+			margin-bottom: 50px;
+		}
+	}
 	</style>
 	</footer>
 </html>
