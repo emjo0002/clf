@@ -1,140 +1,126 @@
+---
+const { data } = Astro.props;
+---
 
 <body>
+  <div class="overmenu">
+    <h4 class="udstillinger">UDSTILLINGER</h4>
+    <div class="pil"></div>
+    <h4 class="tidligere">TIDLIGERE</h4>
+  </div>
+  <h1>‘The right to choose’</h1>
 
-    <div class="overmenu">
-        <h4 class="udstillinger">UDSTILLINGER</h4>
-        <div class="pil"></div>
-        <h4 class="tidligere">TIDLIGERE</h4>
+  <section class="grid1_1">
+    <div>
+      <img class="billede1" src="billeder/billede1.png" alt="billede1" />
     </div>
-    <h1>‘The right to choose’</h1>
-
-    <section class="grid1_1">
-        <div>
-            <img class="billede1" src="billeder/billede1.png" alt="billede1">
-        </div>
-        <div class="titler">
-            <h3 class="kunstner"> Kunstner: Petra Polli (IT/DE)</h3>
-            <h3 class="lokation"> Lokation: Kulturhuset Indre By, Charlotte Ammundsens Plads 3</h3>
-            <h3 class="beskrivelse">Kunstværket består af flere bomuldsbaner, ophænget til tørring som stoffer på
-                stoffarve fabrikker. På stofpanelerne
-                afspilles en video, der viser en flod i en ny trendfarve. Tekstilindustrien forbruger store mængder vand
-                og forurener
-                miljøet. Vandforurening er en stor udfordring, især inden for tekstilraffinement. Giftigt garvningsslam
-                og farverester
-                fra tekstilindustrien sendes mange steder u filtreret ud i floderne, så den kommende sæsons nye
-                trendfarve allerede kan
-                ses i flodernes farve.
-
-                Konsekvensen: millioner af mennesker har ikke rent drikkevand og er plaget af sygdom. I årevis har
-                slagord som “billig
-                er cool” og “fast fashion” bestemt vores shopping adfærd. Moden ændrer sig på kort tid og frister os med
-                lave priser.
-                Hvilket bidrag er vi hver især parate til at yde?</h3>
-
-        </div>
-    </section>
-
-    <div class="link_til">
-        <h3 class="link">Link: www.petrapolli.com
-            Instagram: @petrapolli</h3>
-        <h3 class="tak_til">Tak til: Brixen Water Light Festival
-            Culturehouse City</h3>
+    <div class="titler">
+      <h3 class="kunstner">Kunstner: Petra Polli (IT/DE)</h3>
+      <h3 class="lokation">Lokation: Kulturhuset Indre By, Charlotte Ammundsens Plads 3</h3>
+      <h3 class="beskrivelse">
+        Kunstværket består af flere bomuldsbaner, ophænget til tørring som stoffer på stoffarve fabrikker. På stofpanelerne afspilles en video, der viser en flod i en ny trendfarve. Tekstilindustrien forbruger store mængder vand og forurener miljøet. Vandforurening er en stor udfordring, især inden for tekstilraffinement. Giftigt garvningsslam og farverester fra tekstilindustrien sendes mange steder u filtreret ud i floderne, så den kommende sæsons nye trendfarve allerede kan ses i flodernes farve. Konsekvensen: millioner af mennesker har ikke rent drikkevand og er plaget af sygdom. I årevis har slagord som “billig er cool” og “fast fashion” bestemt vores shopping adfærd. Moden ændrer sig på kort tid og frister os med lave priser. Hvilket bidrag er vi hver især parate til at yde?
+      </h3>
     </div>
+  </section>
+
+  <div class="link_til">
+    <h3 class="link">Link: www.petrapolli.com Instagram: @petrapolli</h3>
+    <h3 class="tak_til">Tak til: Brixen Water Light Festival Culturehouse City</h3>
+  </div>
 </body>
 
 <style>
-    * {
-  padding: 0px;
-  box-sizing: border-box;
-}
+  * {
+    padding: 0px;
+    box-sizing: border-box;
+  }
 
-img {
-  width: 50%;
-  border: 2px solid rgb(255, 255, 255);
-}
+  img {
+    width: 50%;
+    border: 2px solid rgb(255, 255, 255);
+  }
 
-.grid1_1 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin-top: 3%;
-}
+  .grid1_1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 3%;
+  }
 
-h1 {
-  margin-top: 10%;
-  margin-left: 10%;
-  color: aliceblue;
-}
+  h1 {
+    margin-top: 10%;
+    margin-left: 10%;
+    color: aliceblue;
+  }
 
-.billede1 {
-  margin-left: 20%;
-}
+  .billede1 {
+    margin-left: 20%;
+  }
 
-.titler {
-  position: relative;
-  right: 15%;
-  top: -5%;
-  color: aliceblue;
-}
+  .titler {
+    position: relative;
+    right: 15%;
+    top: -5%;
+    color: aliceblue;
+  }
 
-.lokation {
-  position: relative;
-  top: 10%;
-}
+  .lokation {
+    position: relative;
+    top: 10%;
+  }
 
-.beskrivelse {
-  position: relative;
-  top: 30%;
-}
+  .beskrivelse {
+    position: relative;
+    top: 30%;
+  }
 
-body {
-  background-color: rgb(11, 11, 11);
-}
+  body {
+    background-color: rgb(11, 11, 11);
+  }
 
-.link {
-  color: aliceblue;
-}
+  .link {
+    color: aliceblue;
+  }
 
-.tak_til {
-  color: aliceblue;
-}
+  .tak_til {
+    color: aliceblue;
+  }
 
-.link_til {
-  position: relative;
-  left: 10%;
-  margin-top: 2%;
-}
+  .link_til {
+    position: relative;
+    left: 10%;
+    margin-top: 2%;
+  }
 
-.overmenu {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  color: aliceblue;
-  font-size: 0.7rem;
-}
+  .overmenu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    color: aliceblue;
+    font-size: 0.7rem;
+  }
 
-.h4 {
-  color: aliceblue;
-}
+  .h4 {
+    color: aliceblue;
+  }
 
-.udstillinger {
-  position: relative;
-  top: 250%;
-  left: 95%;
-}
+  .udstillinger {
+    position: relative;
+    top: 250%;
+    left: 95%;
+  }
 
-.tidligere {
-  position: relative;
-  top: 250%;
-}
+  .tidligere {
+    position: relative;
+    top: 250%;
+  }
 
-.pil {
-  width: 0;
-  height: 0;
-  border-top: 5px solid transparent; /* Højden af pilen */
-  border-bottom: 5px solid transparent; /* Højden af pilen */
-  border-left: 7.5px solid white; /* Farven på pilen */
-  position: relative;
-  top: 285%;
-  left: 80%;
-}
-
+  .pil {
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent; /* Højden af pilen */
+    border-bottom: 5px solid transparent; /* Højden af pilen */
+    border-left: 7.5px solid white; /* Farven på pilen */
+    position: relative;
+    top: 285%;
+    left: 80%;
+  }
 </style>

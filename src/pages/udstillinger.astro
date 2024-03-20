@@ -1,5 +1,5 @@
 ---
-import Card_v from "../components/Card_v.astro";
+import Udstilling from "../components/Udstilling.astro";
 
 const data = await fetch("https://fcbvmlrpntifmglyhaps.supabase.co/rest/v1/test_products", {
   method: "GET",
@@ -7,7 +7,6 @@ const data = await fetch("https://fcbvmlrpntifmglyhaps.supabase.co/rest/v1/test_
     apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZjYnZtbHJwbnRpZm1nbHloYXBzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTAzNTk3MjgsImV4cCI6MjAyNTkzNTcyOH0.xrxVZKs3mAZMWAP5IsKkDABTXackwex73ZIHtyLHB44",
   },
 }).then((res) => res.json());
-console.log(data);
 ---
 
 <html lang="da">
@@ -25,7 +24,7 @@ console.log(data);
     <section class="udstillinger">
       {
         data.map((udstilling) => {
-          return <Card_v data={udstilling} />;
+          return <Udstilling data={udstilling} />;
         })
       }
     </section>

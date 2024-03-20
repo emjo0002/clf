@@ -1,6 +1,5 @@
 ---
 const { data } = Astro.props;
-console.log(data);
 ---
 
 <div class="grid_1-1">
@@ -8,7 +7,7 @@ console.log(data);
     <h3>{data.name}</h3>
     <p>{data.discription}</p>
 
-    <p>LÆS MERE -----------></p>
+    <a href={`events/${data.id}`}><p>LÆS MERE -----------></p></a>
   </div>
   <div class="image">
     <img src="/du_som_er_i_Himlene.jpg" alt="" class="card_v_billede" />
