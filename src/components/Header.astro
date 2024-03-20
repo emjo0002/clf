@@ -1,0 +1,171 @@
+
+    <header>
+        <header>
+            <div class="logo">
+                <a href="#"><img src="logo.png" alt="Logo"></a>
+            </div>
+            <div class="language">
+                <a href="#" class="language-link">Dansk</a> | <a href="#" class="language-link">English</a>
+            </div>
+            <nav class="top-nav">
+                <ul>
+                    <li>
+                        <a href="#">Mulighed 1</a>
+                        <div class="dropdown-content">
+                            <a href="#">Underemne 1</a>
+                            <a href="#">Underemne 2</a>
+                            <a href="#">Underemne 3</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">Mulighed 2</a>
+                        <div class="dropdown-content">
+                            <a href="#">Underemne 4</a>
+                            <a href="#">Underemne 5</a>
+                            <a href="#">Underemne 6</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="bottom-nav">
+                <ul>
+                    <li>
+                        <a href="#">Mulighed 3</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Dropdown</a>
+                        <div class="dropdown-content">
+                            <a href="#">Underemne X</a>
+                            <a href="#">Underemne Y</a>
+                            <a href="#">Underemne Z</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <!-- Ny sæt navigationselementer -->
+            <nav class="top-nav">
+                <ul>
+                    <li>
+                        <a href="#">Mulighed 1</a>
+                        <div class="dropdown-content">
+                            <a href="#">Underemne 1</a>
+                            <a href="#">Underemne 2</a>
+                            <a href="#">Underemne 3</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">Mulighed 2</a>
+                        <div class="dropdown-content">
+                            <a href="#">Underemne 4</a>
+                            <a href="#">Underemne 5</a>
+                            <a href="#">Underemne 6</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="bottom-nav">
+                <ul>
+                    <li>
+                        <a href="#">Mulighed 3</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Dropdown</a>
+                        <div class="dropdown-content">
+                            <a href="#">Underemne X</a>
+                            <a href="#">Underemne Y</a>
+                            <a href="#">Underemne Z</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+    </header>
+
+
+    <style>
+
+header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  background-color: #333;
+  color: #fff;
+}
+
+.logo {
+  margin-right: 40px;
+}
+
+.logo img {
+  max-height: 50px;
+}
+
+.language {
+  margin-right: auto;
+  margin-left: 20px;
+}
+
+.top-nav ul,
+.bottom-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column; /* Nu lodret layout */
+  margin-left: 100px;
+}
+
+.top-nav li,
+.bottom-nav li {
+  width: 100%; /* Fuldt bredde af forældreelementet */
+
+  padding: 10px 20px;
+}
+
+.top-nav li a,
+.bottom-nav li a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+  margin: 5px;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 120px;
+  z-index: 1;
+  top: 100%;
+  left: 0;
+}
+
+.dropdown-content a {
+  color: #fff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.top-nav {
+  padding-left: 5%;
+}
+
+.bottom-nav {
+  padding-left: 5%;
+}
+
+
+
+    </style>
