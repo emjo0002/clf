@@ -11,7 +11,64 @@
 		<title>Astro</title>
 	</head>
 	<body>
+		<header>
+			<div class="menu_grid">
+				<div class="logo"><img src="../public/logo.png" alt="logo"></div>
+				<div class="sprog">
+					<p class="dansk">DA</p>
+					<p>EN</p></div>
+				<div class="global_menu">
+					<p>For besøgende</p>
+					<p>For kunstnere</p>
+					<p>For sponsorer</p>
+					<p>OM</p>
+				</div>
+				<div class="lokal_menu">
+					<p>UDSTILLINGER</p>
+					<p>FESTIVAL MAP</p>
+				</div>
+</div>
+
+		</header>
 		<h1>Astro</h1>
 	</body>
+
+	<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap');
+header {
+	background-color: black;
+}
+
+p {
+	font-family: "Roboto", sans-serif;
+	color: white;
+}
+
+.dansk {
+	font-weight: bold;
+}
+
+/* MOBIL */
+@media (max-width: 800px) {
+}
+
+/* DESKTOP */
+@media (min-width: 800px) {
+.global_menu {
+	font-size: 15px;
+}
+
+.menu_grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+}
+/*
+.global_menu {
+	grid-column: 3 / span 2;
+	grid-row: 1 / span 2;
+}*/
+}
+	</style>
 
 </html>
