@@ -41,29 +41,19 @@ console.log(data);
         <span>AfterDac</span>
       </div>
       <div>
-        <h1>‘AfterDac’</h1>
+        <h1>{data.name}</h1>
       </div>
       <div class="billede1">
-        <img class="billede1" src="billeder/event.png" alt="billede1" />
+        <img class="billede1" src={"../../../public/img/1000/" + data.image} alt="billede1" />
       </div>
       <div class="titler">
-        <h3 class="kunstner">Kunstner: Petra Polli (IT/DE)</h3>
-        <h3 class="lokation">Lokation: Kulturhuset Indre By, Charlotte Ammundsens Plads 3</h3>
-        <h3 class="beskrivelse">
-          Hvorfor bruger vi mest byen om sommeren? Hvorfor ikke også, når det er koldt – på vinterens præmisser? Copenhagen Light Festival hjælper os til at nyde byen om vinteren. Men hvad gør vi, når festivalens lys er slukket?
-          <br />
-          Kom til AfterDAC og mød en af drivkræfterne bag Copenhagen Light Festival, lysdesigner Jesper Kongshaug, og arkitekt Ellen T. O’Gara, indehaver af tegnestuen Platant, som i mere end ti år har arbejdet med vinterbyen.
-        </h3>
+        <h3 class="kunstner">{data.kunstner}</h3>
+        <h3 class="lokation">{data.lokation}</h3>
+        <h3 class="beskrivelse">{data.discription}</h3>
       </div>
       <div class="link_til">
-        <h3 class="link">
-          Link: www.petrapolli.com <br />
-          Instagram: @petrapolli
-        </h3>
-        <h3 class="tak_til">
-          Tak til: Brixen Water Light Festival <br />
-          Culturehouse City
-        </h3>
+        <h3 class="link"><span>LINK: </span>{data.link}</h3>
+        <h3 class="tak_til"><span>TAK TIL:</span> {data.tak_til}</h3>
       </div>
     </section>
   </body>
@@ -75,6 +65,10 @@ console.log(data);
     max-width: 100%;
     overflow-x: hidden;
     background-color: rgb(11, 11, 11);
+  }
+
+  span {
+    font-size: 1rem;
   }
 
   img {
