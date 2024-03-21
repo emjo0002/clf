@@ -2,15 +2,197 @@
 
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body>
-    <h1>Astro</h1>
-  </body>
-</html>
+<body>
+    <main>
+        <div class="video-container">
+            <video autoplay muted loop width="800" height="450">
+                <source src="img/Echo.mp4" type="video/mp4">
+
+            </video>
+            <div class="video-text">COPENHAGEN LIGHT FESTIVAL</div>
+            <div class="video-text-below">02 februar - 25 februar</div>
+        </div>
+
+        <div class="countdown">
+            <img src="img/countdown2.png" alt="countdown">
+        </div>
+        <div class="tilvisesigen">
+            <h1>TIL VI SES IGEN!</h1>
+        </div>
+        <div class="grid3">
+            <div class="besogende image-overlay">
+                <img src="img/besogende.webp" alt="besogende">
+                <div class="overlay-text">FOR BESØGENDE</div>
+            </div>
+
+            <div class="kunstnere image-overlay">
+                <img src="img/kunstnere.webp" alt="kunstnere">
+                <div class="overlay-text">FOR KUNSTNERE</div>
+            </div>
+            <div class="sponsor image-overlay">
+                <img src="img/sponsor.webp" alt="sponsor">
+                <div class="overlay-text">FOR SPONSORERE</div>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+
+<style>
+  /* GENERELT CSS STYLING */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+img,
+video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+body {
+  background-color: black;
+  margin: 3rem;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.video-text {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 110px;
+  text-align: left;
+  font-family: sans-serif;
+  font-weight: bolder;
+  z-index: 10; /* Sørg for høj z-index */
+}
+
+.video-text-below {
+  position: absolute;
+  top: 95%;
+  left: 23%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 35px;
+
+  text-align: left;
+  font-family: sans-serif;
+
+  z-index: 20; /* Sørg for høj z-index */
+}
+
+.tilvisesigen {
+  color: white;
+  text-align: center;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+  font-family: sans-serif;
+  font-size: 1.5rem;
+}
+
+.countdown {
+  margin-top: 6rem;
+}
+
+.image-overlay {
+  position: relative;
+  display: inline-block;
+}
+
+.grid3 {
+  font-family: sans-serif;
+}
+.overlay-text {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+
+  padding: 10px 20px;
+  white-space: nowrap;
+  border: 2px solid white;
+}
+
+.besogende::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(227, 175, 102, 0.4);
+  z-index: 1;
+}
+
+.kunstnere::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(131, 131, 235, 0.4);
+  z-index: 1;
+}
+
+.sponsor::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(234, 150, 230, 0.4);
+  z-index: 1;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.besogende:hover::before,
+.kunstnere:hover::before,
+.sponsor:hover::before {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+@media (min-width: 800px) {
+  .grid3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 800px) {
+  .video-text {
+    font-size: 1.2rem;
+    top: 20%;
+    left: 45%;
+  }
+
+  .video-text-below {
+    top: 30%;
+    left: 30%;
+    font-size: 0.7rem;
+  }
+}
+</style>

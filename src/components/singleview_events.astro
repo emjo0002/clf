@@ -2,41 +2,148 @@
 
 ---
 
-<div class="grid_1-1">
-  <div>
-    <h3>'Du som er i himlene'</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente debitis tempore beatae ipsa libero illo modi, autem, perspiciatis aliquam assumenda temporibus explicabo ea iure deserunt distinctio, reprehenderit officia dolor enim!</p>
 
-    <p>LÆS MERE -----------></p>
-  </div>
-  <div>
-    <img src="/du_som_er_i_Himlene.jpg" alt="" class="card_v_billede" />
-  </div>
-</div>
+
+<body>
+
+
+    <section class="grid1_1">
+        <div class="tekst-med-pil">
+            <span>EVENTS</span>
+            <span class="pil">&#x25B6;</span>
+            <span>AfterDac</span>
+        </div>
+        <div>
+            <h1>‘AfterDac’</h1>
+        </div>
+        <div class="billede1">
+            <img class="billede1" src="billeder/event.png" alt="billede1">
+        </div>
+        <div class="titler">
+            <h3 class="kunstner"> Kunstner: Petra Polli (IT/DE)</h3>
+            <h3 class="lokation"> Lokation: Kulturhuset Indre By, Charlotte Ammundsens Plads 3</h3>
+            <h3 class="beskrivelse">Hvorfor bruger vi mest byen om sommeren? Hvorfor ikke også, når det er koldt – på
+                vinterens præmisser? Copenhagen Light
+                Festival hjælper os til at nyde byen om vinteren. Men hvad gør vi, når festivalens lys er slukket?
+                <br>
+                Kom til AfterDAC og mød en af drivkræfterne bag Copenhagen Light Festival, lysdesigner Jesper Kongshaug,
+                og arkitekt
+                Ellen T. O’Gara, indehaver af tegnestuen Platant, som i mere end ti år har arbejdet med vinterbyen.
+
+            </h3>
+
+        </div>
+        <div class="link_til">
+            <h3 class="link">Link: www.petrapolli.com <br>
+                Instagram: @petrapolli</h3>
+            <h3 class="tak_til">Tak til: Brixen Water Light Festival <br>
+                Culturehouse City</h3>
+        </div>
+    </section>
+
+
+</body>
+
 
 <style>
-  h3 {
-    font-size: 2rem;
-    margin: 0%;
-  }
+  /* Generel styling for desktop-layout */
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  background-color: rgb(11, 11, 11);
+}
 
-  p {
-    max-width: 75%;
-  }
+img {
+  width: 70%;
+  border: 2px solid rgb(255, 255, 255);
+}
 
-  .grid_1-1 {
-    display: flex;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 8%;
-  }
+.grid1_1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.5fr 1fr 0.5fr;
+  background-image: url("billeder/event.png");
+  background-size: cover;
+  position: relative;
+}
 
-  .card_v_billede {
-    width: 100%;
-    height: auto;
-  }
+.grid1_1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
 
-  p + p {
-    margin-top: 10%;
-  }
+h1 {
+  position: relative;
+  top: 30%;
+  right: 81%;
+  bottom: 15%;
+  color: aliceblue;
+  font-size: 2.5rem;
+  margin-bottom: 20%;
+}
+
+.billede1 {
+  margin-left: 11%;
+  z-index: 10;
+}
+
+.titler {
+  position: relative;
+  right: 5%;
+  top: -3%;
+  color: aliceblue;
+  font-size: 0.8rem;
+  margin-right: 100px;
+}
+
+.lokation {
+  position: relative;
+  top: 10%;
+}
+
+.beskrivelse {
+  position: relative;
+  top: 25%;
+}
+
+.link {
+  color: aliceblue;
+}
+
+.tak_til {
+  color: aliceblue;
+}
+
+.link_til {
+  margin-left: 21%;
+  margin-top: 10%;
+  font-size: 0.7rem;
+  z-index: 10;
+}
+
+.tekst-med-pil {
+  display: flex;
+  align-items: center;
+  color: aliceblue;
+  bottom: 10%;
+}
+
+.tekst-med-pil {
+  position: relative;
+  left: 20%;
+  color: aliceblue;
+  top: -15%;
+  font-size: 0.8rem;
+}
+
+.tekst-med-pil .pil {
+  margin: 0 10px;
+  font-size: 15px;
+}
+
 </style>
