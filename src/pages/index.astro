@@ -27,12 +27,18 @@
 					<p>UDSTILLINGER</p>
 					<p>FESTIVAL MAP</p>
 				</div>
+				<div class="burger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
 			</div>
 
 		</header>
 		<main>
 			<h1>Astro</h1>
 		</main>
+		<script src="burger.js"></script>
 	</body>
 
 	<style>
@@ -49,6 +55,61 @@ p {
 
 /* MOBIL */
 @media (max-width: 800px) {
+	/* Burgermenu */
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 5%;
+}
+
+ul {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+  list-style: none;
+}
+
+.menu li {
+  margin-right: 20px;
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.menu a {
+  display: block;
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s;
+  text-align: end;
+}
+
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.burger .line {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  margin-bottom: 5px;
+  transition: 0.2s linear;
+}
+
+.burger {
+  display: none;
+}
+
 }
 
 /* DESKTOP */
@@ -71,7 +132,7 @@ img {
 	width: 25%;
 }
 
-	.global_menu {
+.global_menu {
 	font-size: 15px;
 }
 
@@ -83,7 +144,6 @@ img {
     margin-right: 60px;
 	font-weight: bold;
 }
-
 .menu_grid {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
