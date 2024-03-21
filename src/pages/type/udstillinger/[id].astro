@@ -1,6 +1,6 @@
 ---
-import Singleview_udstillinger from "../../components/Singleview_udstillinger.astro";
-import Footer from "../../components/Footer.astro";
+import Singleview_udstillinger from "../../../components/Singleview_udstillinger.astro";
+import Footer from "../../../components/Footer.astro";
 
 export async function getStaticPaths() {
   const response = await fetch("https://fcbvmlrpntifmglyhaps.supabase.co/rest/v1/test_products", {
@@ -43,7 +43,7 @@ console.log(data);
 
     <section class="grid1_1">
       <div>
-        <img class="billede1" src={data.image} alt="billede1" />
+        <img class="billede1" src={"../../../public/img/1000/" + data.image} alt="billede1" />
       </div>
       <div class="titler">
         <h3 class="kunstner">{data.kunstner}</h3>
