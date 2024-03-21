@@ -5,12 +5,12 @@ const { data } = Astro.props;
 <div class="grid_1-1">
   <div class="text">
     <h3>{data.name}</h3>
-    <p>{data.discription}</p>
+    <p>{data.teaser}</p>
 
-    <a href={`udstillinger/${data.id}`}><p>LÆS MERE -----------></p></a>
+    <a href={`type/udstillinger/${data.id}`}><p>LÆS MERE -----------></p></a>
   </div>
   <div class="image">
-    <img src="/du_som_er_i_Himlene.jpg" alt="" class="card_v_billede" />
+    <img src={"../../../public/img/1000/" + data.image} alt="" class="card_v_billede" />
   </div>
 </div>
 
