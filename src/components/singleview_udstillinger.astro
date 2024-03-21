@@ -1,15 +1,17 @@
 
 <body>
 
-    <div class="overmenu">
-        <h4 class="udstillinger">UDSTILLINGER</h4>
-        <div class="pil"></div>
-        <h4 class="tidligere">TIDLIGERE</h4>
-    </div>
-    <h1>‘The right to choose’</h1>
 
     <section class="grid1_1">
+        <div class="tekst-med-pil">
+            <span>UDSTILLINGER</span>
+            <span class="pil">&#x25B6;</span>
+            <span>TIDLIGERE</span>
+        </div>
         <div>
+            <h1>‘The right to choose’</h1>
+        </div>
+        <div class="billede1">
             <img class="billede1" src="billeder/billede1.png" alt="billede1">
         </div>
         <div class="titler">
@@ -24,28 +26,34 @@
                 fra tekstilindustrien sendes mange steder u filtreret ud i floderne, så den kommende sæsons nye
                 trendfarve allerede kan
                 ses i flodernes farve.
-
+                <br>
+                <br>
+                <br>
                 Konsekvensen: millioner af mennesker har ikke rent drikkevand og er plaget af sygdom. I årevis har
                 slagord som “billig
                 er cool” og “fast fashion” bestemt vores shopping adfærd. Moden ændrer sig på kort tid og frister os med
                 lave priser.
-                Hvilket bidrag er vi hver især parate til at yde?</h3>
+                Hvilket bidrag er vi hver især parate til at yde?
+            </h3>
 
+        </div>
+        <div class="link_til">
+            <h3 class="link">Link: www.petrapolli.com <br>
+                Instagram: @petrapolli</h3>
+            <h3 class="tak_til">Tak til: Brixen Water Light Festival <br>
+                Culturehouse City</h3>
         </div>
     </section>
 
-    <div class="link_til">
-        <h3 class="link">Link: www.petrapolli.com
-            Instagram: @petrapolli</h3>
-        <h3 class="tak_til">Tak til: Brixen Water Light Festival
-            Culturehouse City</h3>
-    </div>
+
 </body>
 
 <style>
-    * {
-  padding: 0px;
-  box-sizing: border-box;
+    /* Generel styling for desktop-layout */
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  background-color: rgb(11, 11, 11);
 }
 
 img {
@@ -56,24 +64,42 @@ img {
 .grid1_1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-top: 3%;
+  grid-template-rows: 0.5fr 1fr 0.5fr;
+  background-image: url("billeder/billede1.png");
+  background-size: cover;
+  position: relative;
+}
+
+.grid1_1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 h1 {
-  margin-top: 10%;
-  margin-left: 10%;
+  position: relative;
+  top: 30%;
+  right: 81%;
+  bottom: 15%;
   color: aliceblue;
+  font-size: 2.5rem;
 }
 
 .billede1 {
-  margin-left: 20%;
+  margin-left: 11%;
+  z-index: 10;
 }
 
 .titler {
   position: relative;
   right: 15%;
-  top: -5%;
+  top: -3%;
   color: aliceblue;
+  font-size: 0.9rem;
 }
 
 .lokation {
@@ -83,11 +109,7 @@ h1 {
 
 .beskrivelse {
   position: relative;
-  top: 30%;
-}
-
-body {
-  background-color: rgb(11, 11, 11);
+  top: 25%;
 }
 
 .link {
@@ -99,42 +121,30 @@ body {
 }
 
 .link_til {
-  position: relative;
-  left: 10%;
+  margin-left: 21%;
   margin-top: 2%;
-}
-
-.overmenu {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  color: aliceblue;
   font-size: 0.7rem;
+  z-index: 10;
 }
 
-.h4 {
+.tekst-med-pil {
+  display: flex;
+  align-items: center;
   color: aliceblue;
+  bottom: 10%;
 }
 
-.udstillinger {
+.tekst-med-pil {
   position: relative;
-  top: 250%;
-  left: 95%;
+  left: 20%;
+  color: aliceblue;
+  top: -15%;
+  font-size: 0.8rem;
 }
 
-.tidligere {
-  position: relative;
-  top: 250%;
-}
-
-.pil {
-  width: 0;
-  height: 0;
-  border-top: 5px solid transparent; /* Højden af pilen */
-  border-bottom: 5px solid transparent; /* Højden af pilen */
-  border-left: 7.5px solid white; /* Farven på pilen */
-  position: relative;
-  top: 285%;
-  left: 80%;
+.tekst-med-pil .pil {
+  margin: 0 10px;
+  font-size: 15px;
 }
 
 </style>
