@@ -30,97 +30,102 @@ const { data } = Astro.props;
 </body>
 
 <style>
-  * {
-    padding: 0px;
-    box-sizing: border-box;
-  }
+/* Generel styling for desktop-layout */
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  background-color: rgb(11, 11, 11);
+}
 
-  img {
-    width: 50%;
-    border: 2px solid rgb(255, 255, 255);
-  }
+img {
+  width: 50%;
+  border: 2px solid rgb(255, 255, 255);
+}
 
-  .grid1_1 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 3%;
-  }
+.grid1_1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.5fr 1fr 0.5fr;
+  background-image: url("billeder/billede1.png");
+  background-size: cover;
+  position: relative;
+}
 
-  h1 {
-    margin-top: 10%;
-    margin-left: 10%;
-    color: aliceblue;
-  }
+.grid1_1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
 
-  .billede1 {
-    margin-left: 20%;
-  }
+h1 {
+  position: relative;
+  top: 30%;
+  right: 81%;
+  bottom: 15%;
+  color: aliceblue;
+  font-size: 2.5rem;
+}
 
-  .titler {
-    position: relative;
-    right: 15%;
-    top: -5%;
-    color: aliceblue;
-  }
+.billede1 {
+  margin-left: 11%;
+  z-index: 10;
+}
 
-  .lokation {
-    position: relative;
-    top: 10%;
-  }
+.titler {
+  position: relative;
+  right: 15%;
+  top: -3%;
+  color: aliceblue;
+  font-size: 0.9rem;
+}
 
-  .beskrivelse {
-    position: relative;
-    top: 30%;
-  }
+.lokation {
+  position: relative;
+  top: 10%;
+}
 
-  body {
-    background-color: rgb(11, 11, 11);
-  }
+.beskrivelse {
+  position: relative;
+  top: 25%;
+}
 
-  .link {
-    color: aliceblue;
-  }
+.link {
+  color: aliceblue;
+}
 
-  .tak_til {
-    color: aliceblue;
-  }
+.tak_til {
+  color: aliceblue;
+}
 
-  .link_til {
-    position: relative;
-    left: 10%;
-    margin-top: 2%;
-  }
+.link_til {
+  margin-left: 21%;
+  margin-top: 2%;
+  font-size: 0.7rem;
+  z-index: 10;
+}
 
-  .overmenu {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    color: aliceblue;
-    font-size: 0.7rem;
-  }
+.tekst-med-pil {
+  display: flex;
+  align-items: center;
+  color: aliceblue;
+  bottom: 10%;
+}
 
-  .h4 {
-    color: aliceblue;
-  }
+.tekst-med-pil {
+  position: relative;
+  left: 20%;
+  color: aliceblue;
+  top: -15%;
+  font-size: 0.8rem;
+}
 
-  .udstillinger {
-    position: relative;
-    top: 250%;
-    left: 95%;
-  }
+.tekst-med-pil .pil {
+  margin: 0 10px;
+  font-size: 15px;
+}
 
-  .tidligere {
-    position: relative;
-    top: 250%;
-  }
-
-  .pil {
-    width: 0;
-    height: 0;
-    border-top: 5px solid transparent; /* Højden af pilen */
-    border-bottom: 5px solid transparent; /* Højden af pilen */
-    border-left: 7.5px solid white; /* Farven på pilen */
-    position: relative;
-    top: 285%;
-    left: 80%;
-  }
 </style>
