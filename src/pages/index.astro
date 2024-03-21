@@ -13,7 +13,10 @@
 	<body>
 		<header>
 			<div class="menu_grid">
-				<div><img src="../public/logo2.png" alt="logo"></div>
+				<div><a href="../pages/index.astro">
+					<img src="../public/logo2.png" alt="logo">
+				</a>
+				</div>
 				<div class="sprog">
 					<p class="dansk">DA</p>
 					<p>EN</p></div>
@@ -51,7 +54,6 @@ p {
 	color: white;
 }
 
-/* MOBIL */
 .burger {
     cursor: pointer;
     display: none; /* Skjuler burgerikonet som standard */
@@ -64,8 +66,8 @@ p {
     margin: 5px;
 }
 
-@media only screen and (max-width: 768px) {
-	.menu_grid {
+@media screen and (max-width: 768px) {
+.menu_grid {
     display: grid;
     grid-template-columns: auto auto auto auto;
     align-items: center;
@@ -75,21 +77,21 @@ p {
     display: flex;
     justify-content: flex-end;
 }
-	img {
+img {
 	width: 30%;
 }
 .sprog {
         display: none; /* Skjules på mobilversion */
     }
-		.global_menu, .lokal_menu {
+.global_menu, .lokal_menu {
         display: none; /* Skjuler menuerne på mobilvisning */
     }
 
-    .burger {
+.burger {
         display: block; /* Vis burgerikonet på mobilvisning */
     }
 
-    .global_menu.active, .lokal_menu.active {
+.global_menu.active, .lokal_menu.active {
         display: flex;
         flex-direction: column;
         position: absolute;
