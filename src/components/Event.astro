@@ -1,13 +1,13 @@
 ---
-
+const { data } = Astro.props;
 ---
 
 <div class="grid_1-1">
   <div class="text">
-    <h3>'Du som er i himlene'</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente debitis tempore beatae ipsa libero illo modi, autem, perspiciatis aliquam assumenda temporibus explicabo ea iure deserunt distinctio, reprehenderit officia dolor enim!</p>
+    <h3>{data.name}</h3>
+    <p>{data.discription}</p>
 
-    <p>LÆS MERE -----------></p>
+    <a href={`events/${data.id}`}><p>LÆS MERE -----------></p></a>
   </div>
   <div class="image">
     <img src="/du_som_er_i_Himlene.jpg" alt="" class="card_v_billede" />

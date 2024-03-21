@@ -1,0 +1,158 @@
+---
+import Singleview_udstillinger from "../../components/Singleview_udstillinger.astro";
+import Footer from "../../components/Footer.astro";
+
+export async function getStaticPaths() {
+  const response = await fetch("https://fcbvmlrpntifmglyhaps.supabase.co/rest/v1/test_products", {
+    method: "GET",
+    headers: {
+      apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZjYnZtbHJwbnRpZm1nbHloYXBzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTAzNTk3MjgsImV4cCI6MjAyNTkzNTcyOH0.xrxVZKs3mAZMWAP5IsKkDABTXackwex73ZIHtyLHB44",
+    },
+  });
+  const data = await response.json();
+
+  const newData = data.map((udstilling) => {
+    return { params: { id: udstilling.id }, props: { data: udstilling } };
+  });
+
+  //console.log(newData);
+  return newData;
+}
+
+const { id } = Astro.params;
+const { data } = Astro.props;
+console.log(data);
+---
+
+<html lang="da">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{data.name}</title>
+  </head>
+
+  <body>
+    <div class="overmenu">
+      <h4 class="udstillinger">UDSTILLINGER</h4>
+      <div class="pil"></div>
+      <h4 class="tidligere">TIDLIGERE</h4>
+    </div>
+    <h1>{data.name}</h1>
+
+    <section class="grid1_1">
+      <div>
+        <img class="billede1" src={data.image} alt="billede1" />
+      </div>
+      <div class="titler">
+        <h3 class="kunstner">{data.kunstner}</h3>
+        <h3 class="lokation">{data.lokation}</h3>
+        <h3 class="beskrivelse">{data.discription}</h3>
+      </div>
+    </section>
+
+    <div class="link_til">
+      <h3 class="link">Link: {data.link}</h3>
+      <h3 class="tak_til">Tak til: {data.tak_til}</h3>
+    </div>
+  </body>
+
+  <Footer />
+</html>
+
+<style>
+  * {
+    padding: 0px;
+    box-sizing: border-box;
+  }
+
+  img {
+    width: 50%;
+    border: 2px solid rgb(255, 255, 255);
+  }
+
+  .grid1_1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 3%;
+  }
+
+  h1 {
+    margin-top: 10%;
+    margin-left: 10%;
+    color: aliceblue;
+  }
+
+  .billede1 {
+    margin-left: 20%;
+  }
+
+  .titler {
+    position: relative;
+    right: 15%;
+    top: -5%;
+    color: aliceblue;
+  }
+
+  .lokation {
+    position: relative;
+    top: 10%;
+  }
+
+  .beskrivelse {
+    position: relative;
+    top: 30%;
+  }
+
+  body {
+    background-color: rgb(11, 11, 11);
+  }
+
+  .link {
+    color: aliceblue;
+  }
+
+  .tak_til {
+    color: aliceblue;
+  }
+
+  .link_til {
+    position: relative;
+    left: 10%;
+    margin-top: 2%;
+  }
+
+  .overmenu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    color: aliceblue;
+    font-size: 0.7rem;
+  }
+
+  .h4 {
+    color: aliceblue;
+  }
+
+  .udstillinger {
+    position: relative;
+    top: 250%;
+    left: 95%;
+  }
+
+  .tidligere {
+    position: relative;
+    top: 250%;
+  }
+
+  .pil {
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent; /* Højden af pilen */
+    border-bottom: 5px solid transparent; /* Højden af pilen */
+    border-left: 7.5px solid white; /* Farven på pilen */
+    position: relative;
+    top: 285%;
+    left: 80%;
+  }
+</style>

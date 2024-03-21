@@ -1,0 +1,45 @@
+---
+const { data } = Astro.props;
+---
+
+<div class="grid_1-1">
+  <div class="text">
+    <h3>{data.name}</h3>
+    <p>{data.discription}</p>
+
+    <a href={`udstillinger/${data.id}`}><p>LÆS MERE -----------></p></a>
+  </div>
+  <div class="image">
+    <img src="/du_som_er_i_Himlene.jpg" alt="" class="card_v_billede" />
+  </div>
+</div>
+
+<style>
+  h3 {
+    font-size: 2rem;
+    margin: 0%;
+  }
+
+  p {
+    max-width: 75%;
+  }
+
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 8%;
+  }
+  .grid_1-1:nth-child(odd) .text {
+    order: 10;
+  }
+
+  .card_v_billede {
+    width: 100%;
+    height: auto;
+  }
+
+  p + p {
+    margin-top: 10%;
+  }
+</style>
