@@ -27,10 +27,12 @@
 					<p>UDSTILLINGER</p>
 					<p>FESTIVAL MAP</p>
 				</div>
-</div>
+			</div>
 
 		</header>
-		<h1>Astro</h1>
+		<main>
+			<h1>Astro</h1>
+		</main>
 	</body>
 
 	<style>
@@ -44,9 +46,6 @@ p {
 	color: white;
 }
 
-.dansk {
-	font-weight: bold;
-}
 
 /* MOBIL */
 @media (max-width: 800px) {
@@ -54,6 +53,20 @@ p {
 
 /* DESKTOP */
 @media (min-width: 800px) {
+
+.dansk {
+	font-weight: bold;
+	margin-right: 10px;
+}
+.sprog {
+  display: flex;
+}
+
+.global_menu {
+	display: flex;
+	gap: 30px;
+	margin-left: 15px;
+}
 img {
 	width: 25%;
 }
@@ -62,16 +75,20 @@ img {
 	font-size: 15px;
 }
 
+.lokal_menu {
+	display: flex;
+    justify-content: flex-end;
+    grid-column: 3 / span 1;
+    gap: 30px;
+    margin-right: 60px;
+	font-weight: bold;
+}
+
 .menu_grid {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: 1fr 1fr;
 }
-/*
-.global_menu {
-	grid-column: 3 / span 2;
-	grid-row: 1 / span 2;
-}*/
 }
 	</style>
 
