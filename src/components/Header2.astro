@@ -21,15 +21,15 @@
 					<p class="dansk">DA</p>
 					<p>EN</p></div>
 				<div class="global_menu">
-					<p>For besøgende</p>
+					<p class="lilla">For besøgende</p>
 					<p>For kunstnere</p>
 					<p>For sponsorer</p>
 					<p>OM</p>
 				</div>
 				<div class="lokal_menu">
 					<a class="no_underline" href="udstillinger.astro">UDSTILLINGER</a>
-					<p>FESTIVAL MAP</p>
-					<p>APP</p>
+					<p class="rykke_op">FESTIVAL MAP</p>
+					<p class="rykke_op">APP</p>
 					<li class="dropdown">
 						<a href="#" class="dropbtn">UDFORSK</a>
 						<div class="dropdown-content">
@@ -74,6 +74,7 @@
   background-color: #000000;
   min-width: 160px;
   z-index: 1;
+  font-weight: lighter;
 }
 
 /* Links inside the dropdown */
@@ -128,7 +129,8 @@ p, a {
 
 .global_menu, .lokal_menu {
     display: flex;
-    justify-content: flex-end;
+	justify-content: flex-end;
+	display: none; /* Skjuler menuerne på mobilvisning */
 }
 img {
 	width: 30%;
@@ -136,10 +138,6 @@ img {
 .sprog {
         display: none; /* Skjules på mobilversion */
     }
-.global_menu, .lokal_menu {
-        display: none; /* Skjuler menuerne på mobilvisning */
-    }
-
 .burger {
         display: block; /* Vis burgerikonet på mobilvisning */
     }
@@ -158,8 +156,35 @@ img {
 }
 
 /* DESKTOP */
-@media (min-width: 800px) {
+@media screen and (min-width: 800px) {
+.rykke_op {
+	margin-top: -1px;
+}
 
+.lilla {
+	color: #8B61F7;
+}
+
+/* Hoover effekt */
+.no_underline {
+  text-decoration: none;
+  color: rgb(255, 255, 255); /* Standard farve på menuen */
+  position: relative; /* Position relativ for at tilføje den lilla streg */
+}
+
+.no_underline:hover {
+  color: #8B61F7; /* Ændrer farven på menuen, når musen svejses over */
+}
+
+.no_underline:hover::after {
+  content: '';
+  position: absolute;
+  bottom: 40px; /* Justerer positionen af den lilla streg */
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #8B61F7; /* Farve på den lilla streg */
+}
 .dansk {
 	font-weight: bold;
 	margin-right: 10px;
@@ -184,8 +209,8 @@ img {
 .lokal_menu {
 	display: flex;
     justify-content: flex-end;
-    grid-column: 3 / span 1;
-    gap: 30px;
+    grid-column: 2 / span 2;
+    gap: 60px;
     margin-right: 60px;
 	font-weight: bold;
 }
